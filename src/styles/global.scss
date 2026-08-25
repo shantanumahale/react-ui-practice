@@ -1,0 +1,55 @@
+@use './variables' as v;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: v.$bg;
+  color: v.$text;
+  font-family: v.$font;
+  line-height: 1.5;
+}
+
+a {
+  color: v.$accent;
+}
+
+button {
+  font: inherit;
+  padding: 8px 14px;
+  border: 1px solid v.$border;
+  border-radius: v.$radius;
+  background: v.$surface;
+  color: v.$text;
+  cursor: pointer;
+
+  &:hover {
+    border-color: v.$accent;
+  }
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+  padding: 8px 10px;
+  border: 1px solid v.$border;
+  border-radius: v.$radius;
+  background: v.$bg;
+  color: v.$text;
+}
+
+code {
+  font-family: v.$mono;
+  font-size: 0.9em;
+}

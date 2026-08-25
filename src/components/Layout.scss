@@ -1,0 +1,50 @@
+@use '../styles/variables' as v;
+
+.layout {
+  display: flex;
+  min-height: 100%;
+
+  &__sidebar {
+    flex: 0 0 220px;
+    padding: v.$space;
+    border-right: 1px solid v.$border;
+    background: v.$surface;
+  }
+
+  &__brand {
+    display: block;
+    margin-bottom: v.$space * 1.5;
+    color: v.$text;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__link {
+    padding: 8px 10px;
+    border-radius: v.$radius;
+    color: v.$text-muted;
+    text-decoration: none;
+
+    &:hover {
+      background: v.$bg;
+      color: v.$text;
+    }
+
+    &--active {
+      background: v.$bg;
+      color: v.$accent;
+    }
+  }
+
+  &__main {
+    flex: 1;
+    min-width: 0;
+    padding: v.$space * 2;
+  }
+}

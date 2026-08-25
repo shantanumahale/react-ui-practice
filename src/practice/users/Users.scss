@@ -1,0 +1,33 @@
+@use '../../styles/variables' as v;
+
+.users {
+  max-width: 520px;
+
+  &__error {
+    color: #ff7b7b;
+  }
+
+  &__list {
+    margin: v.$space 0 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    gap: v.$space;
+    padding: 10px 12px;
+    border: 1px solid v.$border;
+    border-radius: v.$radius;
+    background: v.$surface;
+
+    span {
+      color: v.$text-muted;
+      font-size: 0.9em;
+    }
+  }
+}

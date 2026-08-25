@@ -1,0 +1,15 @@
+@use '../../styles/variables' as v;
+
+.counter {
+  &__value {
+    margin: v.$space 0;
+    font-family: v.$mono;
+    font-size: 48px;
+    font-weight: 600;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 8px;
+  }
+}
