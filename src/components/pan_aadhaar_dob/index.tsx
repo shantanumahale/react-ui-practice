@@ -27,7 +27,28 @@ export default function PanAadhaarInputFields() {
     setAadhaar(formatted);
   };
   const handleDobInput = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setDob(e.target.value);
+    const input = e.target.value.replace(/[^0-9]/g, "");
+    const nativeEvent = e.nativeEvent as InputEvent;
+    const isDeleting = nativeEvent.inputType === "deleteContentBackward";
+    const length = input.length;
+    let formatted = "";
+
+    if (length === 0) {
+      formatted = "";
+    } else if (length <= 2) {
+      formatted = input;
+      if (length === 2 && !isDeleting) {
+        formatted += "/";
+      }
+    } else if (length <= 4) {
+      formatted = `${input.slice(0, 2)}/${input.slice(2)}`;
+      if (length === 4 && !isDeleting) {
+        formatted += "/";
+      }
+    } else {
+      formatted = `${input.slice(0, 2)}/${input.slice(2, 4)}/${input.slice(4)}`;
+    }
+    setDob(formatted);
   };
 
   return (
