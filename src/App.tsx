@@ -1,3 +1,11 @@
+import PanAadhaarInputFields from "./components/pan_aadhaar_dob";
+import UsernamePassword from "./components/username-password";
+
 export default function App() {
-  return <h1>Hello World</h1>;
+  return (
+    <div>
+      <UsernamePassword />
+      <PanAadhaarInputFields />
+    </div>
+  );
 }
