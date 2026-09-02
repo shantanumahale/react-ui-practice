@@ -21,7 +21,10 @@ export default function PanAadhaarInputFields() {
     setPan(formatted);
   };
   const handleAadhaarInput = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setAadhaar(e.target.value);
+    const input = e.target.value.replace(/[^0-9]/g, "");
+    const truncated = input.slice(0, 12);
+    const formatted = truncated.replace(/(\d{4})(?=\d)/g, "$1 ");
+    setAadhaar(formatted);
   };
   const handleDobInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     setDob(e.target.value);
@@ -42,9 +45,8 @@ export default function PanAadhaarInputFields() {
         onChange={handleAadhaarInput}
         type="text"
         inputMode="numeric"
-        maxLength={12}
-        placeholder="123412341234"
-        pattern="[0-9]{12}"
+        maxLength={14}
+        placeholder="1234 1234 1234"
       />
       <input
         value={dob}
