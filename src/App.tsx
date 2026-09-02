@@ -1,4 +1,5 @@
 import CreditCard from "./components/credit-card/input";
+import FromToDate from "./components/from-to-date";
 import ContactDetails from "./components/mobile-telephone-email";
 import PanAadhaarInputFields from "./components/pan_aadhaar_dob";
 import UsernamePassword from "./components/username-password";
@@ -10,6 +11,7 @@ export default function App() {
       <PanAadhaarInputFields />
       <CreditCard />
       <ContactDetails />
+      <FromToDate />
     </div>
   );
 }
