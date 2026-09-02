@@ -1,6 +1,0 @@
-import { useDispatch, useSelector } from 'react-redux';
-import type { AppDispatch, RootState } from './index';
-
-// Use these instead of the plain react-redux hooks so types flow through.
-export const useAppDispatch = useDispatch.withTypes<AppDispatch>();
-export const useAppSelector = useSelector.withTypes<RootState>();
