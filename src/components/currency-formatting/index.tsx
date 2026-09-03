@@ -38,7 +38,6 @@ export default function Currency() {
         rawInputReversed.slice(7);
     }
     formatted = formatted.split("").reverse().join("");
-
     setRupee(formatted);
   };
 
@@ -56,14 +55,14 @@ export default function Currency() {
   return (
     <div>
       <input
-        value={rupee}
+        value={"₹ " + rupee}
         onChange={handleRupeeInput}
         type="text"
         inputMode="numeric"
         placeholder="₹2,00,00,000"
       />
       <input
-        value={dollar}
+        value={"$ " + dollar}
         onChange={handleDollarInput}
         type="text"
         inputMode="numeric"
