@@ -1,5 +1,6 @@
 import CreditCard from "./components/credit-card/input";
 import Currency from "./components/currency-formatting";
+import FileUpload from "./components/file-upload";
 import FromToDate from "./components/from-to-date";
 import ContactDetails from "./components/mobile-telephone-email";
 import PanAadhaarInputFields from "./components/pan_aadhaar_dob";
@@ -14,6 +15,7 @@ export default function App() {
       <ContactDetails />
       <FromToDate />
       <Currency />
+      <FileUpload />
     </div>
   );
 }
